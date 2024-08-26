@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "914486124699",
+    "project_id": "safirikenya-2a3d9",
+    "storage_bucket": "safirikenya-2a3d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914486124699:android:279d2ae899fc4d3d1e263e",
+        "android_client_info": {
+          "package_name": "com.example.safirikenya"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6HAELGxOlQbakJNtEPCCS8uQiJGw2w0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
