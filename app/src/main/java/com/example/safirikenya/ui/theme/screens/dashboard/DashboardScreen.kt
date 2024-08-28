@@ -34,7 +34,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.safirikenya.R
 import com.example.safirikenya.navigation.ROUT_ABOUT
 import com.example.safirikenya.navigation.ROUT_ACTIVITIES
+import com.example.safirikenya.navigation.ROUT_GUIDE
 import com.example.safirikenya.navigation.ROUT_HOME
+import com.example.safirikenya.navigation.ROUT_INTENT
 import com.example.safirikenya.navigation.ROUT_LOGIN
 import com.example.safirikenya.ui.theme.NewGreen
 import com.example.safirikenya.ui.theme.NewGrey
@@ -58,7 +60,7 @@ fun DashboardScreen(navController: NavController){
         Spacer(modifier = androidx.compose.ui.Modifier.height(15.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.img),
+            painter = painterResource(id = R.drawable.img_2),
             contentDescription = "home",
             modifier = androidx.compose.ui.Modifier.size(100.dp),
             contentScale = ContentScale.Crop
@@ -93,7 +95,7 @@ fun DashboardScreen(navController: NavController){
                 //Row1
                 Row(modifier = Modifier
                     .padding(25.dp)
-                    .clickable { ROUT_LOGIN}
+                    .clickable { ROUT_GUIDE}
                 ) {
                     //Card
                     Card(modifier = Modifier
@@ -107,14 +109,14 @@ fun DashboardScreen(navController: NavController){
                                modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center )
                            {
                                Image(
-                                   painter = painterResource(id = R.drawable.img_6),
+                                   painter = painterResource(id = R.drawable.img_7),
                                    contentDescription = "home",
                                    modifier = Modifier.size(100.dp)
                                )
                            }
 
                            Text(
-                               text = "Profile.",
+                               text = "Tourist guide.",
                                fontSize = 25.sp,
                                fontFamily = FontFamily.SansSerif,
                                color = Color.DarkGray,
@@ -142,12 +144,12 @@ fun DashboardScreen(navController: NavController){
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clickable {
-                                        navController.navigate(ROUT_ABOUT)
+                                        navController.navigate(ROUT_ACTIVITIES)
                                     },
 
                                 contentAlignment = Alignment.Center) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.img_5),
+                                    painter = painterResource(id = R.drawable.img_8),
                                     contentDescription = "home",
                                     modifier = Modifier.size(100.dp)
 
@@ -155,7 +157,7 @@ fun DashboardScreen(navController: NavController){
                             }
 
                             Text(
-                                text ="Hotels.",
+                                text ="Things to do.",
                                 fontSize = 25.sp,
                                 fontFamily = FontFamily.SansSerif,
                                 color = Color.DarkGray,
@@ -177,7 +179,7 @@ fun DashboardScreen(navController: NavController){
 
                 Row(modifier = Modifier
                     .padding(20.dp)
-                    .clickable { ROUT_ACTIVITIES }
+                    .clickable { ROUT_INTENT }
                 ) {
                     //Card
                     Card(modifier = Modifier
@@ -190,14 +192,14 @@ fun DashboardScreen(navController: NavController){
                             Box(
                                 modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.img_8),
+                                    painter = painterResource(id = R.drawable.img_5),
                                     contentDescription = "home",
                                     modifier = Modifier.size(100.dp)
                                 )
                             }
 
                             Text(
-                                text = "Activities to do nearby.",
+                                text = "Hotel.",
                                 fontSize = 25.sp,
                                 fontFamily = FontFamily.SansSerif,
                                 color = Color.DarkGray,
@@ -216,7 +218,7 @@ fun DashboardScreen(navController: NavController){
                     Card(modifier = Modifier
                         .width(160.dp)
                         .height(180.dp)
-                        .clickable {  },
+                        .clickable { ROUT_LOGIN },
                         elevation = CardDefaults.cardElevation(10.dp),) {
                         Column {
                             Spacer(modifier = androidx.compose.ui.Modifier.height(15.dp))
@@ -225,7 +227,7 @@ fun DashboardScreen(navController: NavController){
                                 modifier = Modifier.fillMaxWidth(),
                                 contentAlignment = Alignment.Center) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.img_7),
+                                    painter = painterResource(id = R.drawable.img_6),
                                     contentDescription = "home",
                                     modifier = Modifier.size(100.dp)
 
@@ -233,7 +235,7 @@ fun DashboardScreen(navController: NavController){
                             }
 
                             Text(
-                                text = "Tourist guide.",
+                                text = "Profile.",
                                 fontSize = 25.sp,
                                 fontFamily = FontFamily.SansSerif,
                                 color = Color.DarkGray,

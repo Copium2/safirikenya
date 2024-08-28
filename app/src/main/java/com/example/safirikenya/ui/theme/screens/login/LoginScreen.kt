@@ -59,7 +59,7 @@ fun LoginScreen(navController: NavController) {
         Spacer(modifier = androidx.compose.ui.Modifier.height(20.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.img5),
+            painter = painterResource(id = R.drawable.img_15),
             contentDescription = "home",
             modifier = androidx.compose.ui.Modifier
                 .size(200.dp),

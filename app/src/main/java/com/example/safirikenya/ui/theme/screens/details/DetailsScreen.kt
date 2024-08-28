@@ -214,7 +214,7 @@ fun DetailsScreen(navController: NavController) {
             )
             {
                 Image(
-                    painter = painterResource(id = R.drawable.img_2),
+                    painter = painterResource(id = R.drawable.img_13),
                     contentDescription = "home",
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop

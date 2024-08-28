@@ -49,23 +49,23 @@ import androidx.compose.ui.tooling.preview.Preview as Preview
 @Composable
 fun SignupScreen(navController: NavController){
 
-    Column(modifier = androidx.compose.ui.Modifier
+    Column(modifier = Modifier
         .fillMaxSize()
         .paint(painterResource(id = R.drawable.bg), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally)
 
         {
-            Spacer(modifier = androidx.compose.ui.Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
             Image(
                 painter = painterResource(id = R.drawable.img_14),
                 contentDescription = "home",
-                modifier = androidx.compose.ui.Modifier
+                modifier = Modifier
                     .size(200.dp),
                 contentScale = ContentScale.Crop
             )
 
-            Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             Text(
                 text = "Safiri Kenya",
@@ -90,7 +90,7 @@ fun SignupScreen(navController: NavController){
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
             )
 
-            Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
 
             OutlinedTextField(
@@ -104,7 +104,7 @@ fun SignupScreen(navController: NavController){
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
             )
 
-            Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
 
             OutlinedTextField(
@@ -120,7 +120,7 @@ fun SignupScreen(navController: NavController){
 
             )
 
-            Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
+            Spacer(modifier =Modifier.height(10.dp))
 
 
             OutlinedTextField(
@@ -135,14 +135,14 @@ fun SignupScreen(navController: NavController){
                 visualTransformation = PasswordVisualTransformation()
             )
 
-            Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
+            Spacer(modifier =Modifier.height(10.dp))
 
             val context = LocalContext.current
             val authViewModel = AuthViewModel(navController, context)
 
             Button(
                 onClick = {  authViewModel.signup(name, email, password,confpassword)},
-                modifier = androidx.compose.ui.Modifier
+                modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
                     .padding(start = 20.dp, end = 20.dp),
@@ -153,11 +153,11 @@ fun SignupScreen(navController: NavController){
                 Text(text = "Register")
             }
 
-            Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             Button(
                 onClick = {navController.navigate(ROUT_LOGIN) },
-                modifier = androidx.compose.ui.Modifier
+                modifier =Modifier
                     .fillMaxWidth()
                     .height(50.dp)
                     .padding(start = 20.dp, end = 20.dp),

@@ -63,8 +63,6 @@ import com.example.safirikenya.R
 import com.example.safirikenya.ui.theme.NewGreen
 
 
-
-
 fun Scaffold(modifier: Unit) {
 
 }

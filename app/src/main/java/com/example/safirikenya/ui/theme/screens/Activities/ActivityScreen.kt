@@ -46,7 +46,7 @@ fun ActivityScreen(navController: NavController) {
 
         TopAppBar(
             title = { Text(text = "Activities") },
-            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.DarkGray),
+            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.LightGray),
             navigationIcon = {
                 IconButton(onClick = {/*TODO*/ }) {
                     Icon(
@@ -68,7 +68,7 @@ fun ActivityScreen(navController: NavController) {
         )
 
         Box(
-            modifier = Modifier.height(200.dp),
+            modifier = Modifier.height(200.dp).width(600.dp),
             contentAlignment = Alignment.Center
         ) {
             Image(
@@ -81,82 +81,91 @@ fun ActivityScreen(navController: NavController) {
 
 
         Text(
-            text ="Discover the exciting attractions at Wild Waters Kenya, Mombasa's premier Waterpark",
+            text = "Discover the exciting attractions at Wild Waters Kenya, Mombasa's premier Waterpark",
             fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
             color = Color.Black,
         )
 
         //start
-        Card() {
-            Box(
-                modifier = Modifier
-                    .height(150.dp)
-                    .width(200.dp),
-                contentAlignment = Alignment.Center
+        Box(
+            modifier = Modifier
+                .height(150.dp)
+                .width(400.dp),
+            contentAlignment = Alignment.Center
+        )
+        {
+            Image(
+                painter = painterResource(id = R.drawable.img_16),
+                contentDescription = "home",
+                modifier = Modifier.fillMaxSize().size(70.dp),
+                contentScale = ContentScale.Crop
             )
-            {
-                Image(
-                    painter = painterResource(id = R.drawable.img_16),
-                    contentDescription = "home",
-                    modifier = Modifier.fillMaxSize().size(70.dp),
-                    contentScale = ContentScale.Crop
-                )
-            }
-
-
-            Text(
-                text ="Experience Africa like never before. All safaris here are loaded by the safari operator themselves.",
-                fontSize = 20.sp,
-                fontFamily = FontFamily.SansSerif,
-                color = Color.Black,
-            )
-
 
         }
+
+
+        Text(
+            text = "Experience Africa like never before. All safaris here are loaded by the safari operator themselves.",
+            fontSize = 20.sp,
+            fontFamily = FontFamily.SansSerif,
+            color = Color.Black,
+        )
+
+
+
 
         Spacer(modifier = androidx.compose.ui.Modifier.width(40.dp))
 
-        Card() {
-            Box(
-                modifier = Modifier
-                    .height(150.dp)
-                    .width(200.dp),
-                contentAlignment = Alignment.Center,
+        Box(
+            modifier = Modifier
+                .height(150.dp)
+                .width(400.dp),
+            contentAlignment = Alignment.Center,
+        )
+        {
+            Image(
+                painter = painterResource(id = R.drawable.img_9),
+                contentDescription = "home",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
             )
-            {
-                Image(
-                    painter = painterResource(id = R.drawable.img_9),
-                    contentDescription = "home",
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
-            }
         }
+
+        Text(
+            text = "Enjoy the oceans breeze within our beautiful beaches.",
+            fontSize = 20.sp,
+            fontFamily = FontFamily.SansSerif,
+            color = Color.Black,
+        )
+
+
+
         Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
 
-        Card() {
-            Box(
-                modifier = Modifier
-                    .height(150.dp)
-                    .width(200.dp),
-                contentAlignment = Alignment.Center,
+
+        Box(
+            modifier = Modifier
+                .height(150.dp)
+                .width(600.dp),
+            contentAlignment = Alignment.Center,
+        )
+        {
+            Image(
+                painter = painterResource(id = R.drawable.img_12),
+                contentDescription = "home",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
             )
-            {
-                Image(
-                    painter = painterResource(id = R.drawable.img_12),
-                    contentDescription = "home",
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
-            }
         }
 
-        //end
-
-
-
-
+        Text(
+            text = "Come over and relax within our beautiful hotels.",
+            fontSize = 20.sp,
+            fontFamily = FontFamily.SansSerif,
+            color = Color.Black,
+        )
+    //end
     }
 }
 @Composable
