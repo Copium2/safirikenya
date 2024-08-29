@@ -51,7 +51,7 @@ fun LoginScreen(navController: NavController) {
     Column(
         modifier = androidx.compose.ui.Modifier
             .fillMaxSize()
-            .paint(painterResource(id = R.drawable.bg), contentScale = ContentScale.FillBounds),
+            .paint(painterResource(id = R.drawable.img_20), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally
     )
 
@@ -59,7 +59,7 @@ fun LoginScreen(navController: NavController) {
         Spacer(modifier = androidx.compose.ui.Modifier.height(20.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.img_15),
+            painter = painterResource(id = R.drawable.img_9),
             contentDescription = "home",
             modifier = androidx.compose.ui.Modifier
                 .size(200.dp),

@@ -51,7 +51,7 @@ fun SignupScreen(navController: NavController){
 
     Column(modifier = Modifier
         .fillMaxSize()
-        .paint(painterResource(id = R.drawable.bg), contentScale = ContentScale.FillBounds),
+        .paint(painterResource(id = R.drawable.ic_launcher_background), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally)
 
         {

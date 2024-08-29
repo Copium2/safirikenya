@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Card
@@ -40,7 +42,8 @@ fun ActivityScreen(navController: NavController) {
 
     Column(
 
-        modifier = androidx.compose.ui.Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize(),
     )
     {
 
@@ -66,106 +69,115 @@ fun ActivityScreen(navController: NavController) {
 
 
         )
+        Card (modifier = Modifier.verticalScroll(rememberScrollState())){
 
-        Box(
-            modifier = Modifier.height(200.dp).width(600.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.img_15),
-                contentDescription = "home",
-                modifier = Modifier.fillMaxSize().size(70.dp)
+
+            Box(
+                modifier = Modifier
+                    .height(200.dp)
+                    .width(600.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.img_15),
+                    contentDescription = "home",
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .size(70.dp)
+                )
+
+            }
+
+
+            Text(
+                text = "Discover the exciting attractions at Wild Waters Kenya, Mombasa's premier Waterpark",
+                fontSize = 20.sp,
+                fontFamily = FontFamily.SansSerif,
+                color = Color.Black,
             )
 
-        }
+            //start
+            Box(
+                modifier = Modifier
+                    .height(150.dp)
+                    .width(400.dp),
+                contentAlignment = Alignment.Center
+            )
+            {
+                Image(
+                    painter = painterResource(id = R.drawable.img_16),
+                    contentDescription = "home",
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .size(70.dp),
+                    contentScale = ContentScale.Crop
+                )
+
+            }
 
 
-        Text(
-            text = "Discover the exciting attractions at Wild Waters Kenya, Mombasa's premier Waterpark",
-            fontSize = 20.sp,
-            fontFamily = FontFamily.SansSerif,
-            color = Color.Black,
-        )
-
-        //start
-        Box(
-            modifier = Modifier
-                .height(150.dp)
-                .width(400.dp),
-            contentAlignment = Alignment.Center
-        )
-        {
-            Image(
-                painter = painterResource(id = R.drawable.img_16),
-                contentDescription = "home",
-                modifier = Modifier.fillMaxSize().size(70.dp),
-                contentScale = ContentScale.Crop
+            Text(
+                text = "Experience Africa like never before. All safaris here are loaded by the safari operator themselves.",
+                fontSize = 20.sp,
+                fontFamily = FontFamily.SansSerif,
+                color = Color.Black,
             )
 
-        }
-
-
-        Text(
-            text = "Experience Africa like never before. All safaris here are loaded by the safari operator themselves.",
-            fontSize = 20.sp,
-            fontFamily = FontFamily.SansSerif,
-            color = Color.Black,
-        )
 
 
 
+            Spacer(modifier = Modifier.width(40.dp))
 
-        Spacer(modifier = androidx.compose.ui.Modifier.width(40.dp))
-
-        Box(
-            modifier = Modifier
-                .height(150.dp)
-                .width(400.dp),
-            contentAlignment = Alignment.Center,
-        )
-        {
-            Image(
-                painter = painterResource(id = R.drawable.img_9),
-                contentDescription = "home",
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
+            Box(
+                modifier = Modifier
+                    .height(150.dp)
+                    .width(400.dp),
+                contentAlignment = Alignment.Center,
             )
-        }
+            {
+                Image(
+                    painter = painterResource(id = R.drawable.img_9),
+                    contentDescription = "home",
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
+                )
+            }
 
-        Text(
-            text = "Enjoy the oceans breeze within our beautiful beaches.",
-            fontSize = 20.sp,
-            fontFamily = FontFamily.SansSerif,
-            color = Color.Black,
-        )
-
-
-
-        Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
-
-
-        Box(
-            modifier = Modifier
-                .height(150.dp)
-                .width(600.dp),
-            contentAlignment = Alignment.Center,
-        )
-        {
-            Image(
-                painter = painterResource(id = R.drawable.img_12),
-                contentDescription = "home",
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
+            Text(
+                text = "Enjoy the oceans breeze within our beautiful beaches.",
+                fontSize = 20.sp,
+                fontFamily = FontFamily.SansSerif,
+                color = Color.Black,
             )
-        }
 
-        Text(
-            text = "Come over and relax within our beautiful hotels.",
-            fontSize = 20.sp,
-            fontFamily = FontFamily.SansSerif,
-            color = Color.Black,
-        )
-    //end
+
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+
+            Box(
+                modifier = Modifier
+                    .height(150.dp)
+                    .width(600.dp),
+                contentAlignment = Alignment.Center,
+            )
+            {
+                Image(
+                    painter = painterResource(id = R.drawable.img_12),
+                    contentDescription = "home",
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
+                )
+            }
+
+            Text(
+                text = "Come over and relax within our beautiful hotels.",
+                fontSize = 20.sp,
+                fontFamily = FontFamily.SansSerif,
+                color = Color.Black,
+            )
+            //end
+        }
     }
 }
 @Composable

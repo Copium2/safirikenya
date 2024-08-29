@@ -21,7 +21,7 @@ class AuthViewModel(var navController: NavController, var context: Context){
             progress.setTitle("Loading")
             progress.setMessage("Please wait...")
         }
-        fun signup(name:String, email:String, password:String,confpassword:String){
+        fun signup(name:String, email:String, password:String, confpassword:String){
 
 
             if (email.isBlank() || password.isBlank() ||confpassword.isBlank()){

@@ -47,8 +47,11 @@ import com.example.safirikenya.ui.theme.NewOrange
 fun DashboardScreen(navController: NavController){
 
     Column (
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally)
+        modifier = Modifier
+            .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        )
+
     {
 
         Text(

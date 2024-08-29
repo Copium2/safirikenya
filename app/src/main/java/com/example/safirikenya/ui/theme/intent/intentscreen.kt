@@ -18,11 +18,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.Face
+import androidx.compose.material.icons.outlined.Favorite
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.ShoppingCart
@@ -142,7 +144,6 @@ fun intentscreen(navController: NavController) {
                 ) {
                     //Row 1
 
-
                     Row {
                         Card() {
                             Box(
@@ -216,7 +217,7 @@ fun intentscreen(navController: NavController) {
                     //end of row
                     Spacer(modifier = androidx.compose.ui.Modifier.height(20.dp))
 
-                    val mContext = LocalContext.current
+                    val mContext= LocalContext.current
 
                     Button(
                         onClick = {
@@ -331,9 +332,15 @@ fun intentscreen(navController: NavController) {
                     ) {
                         Text(text = "Share")
                     }
+                   //start
+
+                    //end
 
                 }
+
+
             })
+
         }
    }
 
@@ -350,17 +357,17 @@ val bottomNavItems = listOf(
 
 
     BottomNavItem(
-        title = "Details",
-        route="details",
-        selectedIcon=Icons.Filled.Face,
-        unselectedIcon=Icons.Outlined.Face,
+        title = "Activities",
+        route="activities",
+        selectedIcon=Icons.Filled.Favorite,
+        unselectedIcon=Icons.Outlined.Favorite,
         hasNews = true,
         badges=1
     ),
 
     BottomNavItem(
-        title = "Property",
-        route="property",
+        title = "Guide",
+        route="Guide",
         selectedIcon=Icons.Filled.Place,
         unselectedIcon=Icons.Outlined.Place,
         hasNews = true,
@@ -370,10 +377,10 @@ val bottomNavItems = listOf(
 
 
     BottomNavItem(
-        title = "About",
-        route="about",
-        selectedIcon=Icons.Filled.ShoppingCart,
-        unselectedIcon=Icons.Outlined.ShoppingCart,
+        title = "Profile",
+        route="Profile",
+        selectedIcon=Icons.Filled.Face,
+        unselectedIcon=Icons.Outlined.Face,
         hasNews = true,
         badges=5
     ),
@@ -389,6 +396,11 @@ data class BottomNavItem(
     val hasNews :Boolean,
     val badges :Int
 )
+
+
+
+
+
 
 
 @Composable

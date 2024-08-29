@@ -16,6 +16,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -38,6 +39,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.safirikenya.R
@@ -52,8 +54,12 @@ fun DetailsScreen(navController: NavController) {
 
     Column(
 
-        modifier = androidx.compose.ui.Modifier.fillMaxSize(),
-    )
+        modifier = Modifier
+            .fillMaxSize()
+            
+        )
+
+
     {
         TopAppBar(
             title = { Text(text = "Hotels") },
@@ -77,16 +83,6 @@ fun DetailsScreen(navController: NavController) {
 
         )
 
-    Box(
-        modifier = Modifier.height(280.dp),
-        contentAlignment = Alignment.Center
-    ){
-        Image(
-            painter = painterResource(id = R.drawable.img_11),
-            contentDescription = "home",
-            modifier = Modifier.fillMaxSize()
-        )
-    }
     Spacer(modifier = androidx.compose.ui.Modifier.height(20.dp))
 
     var search by remember { mutableStateOf("") }
@@ -115,7 +111,7 @@ fun DetailsScreen(navController: NavController) {
             Box(
                 modifier = Modifier
                     .height(150.dp)
-                    .width(200.dp),
+                    .width(250.dp),
                 contentAlignment = Alignment.Center
             )
             {
@@ -126,15 +122,58 @@ fun DetailsScreen(navController: NavController) {
                     contentScale = ContentScale.Crop
                 )
             }
+            //start
+
+            Column(
+                modifier = Modifier
+                    .padding(start = 20.dp, end = 2.dp)
+            )
+            {
+                Text(text = "Sarova Beach resort", fontSize = 20.sp)
+                Text(text = "Your luxury getaway resort!")
+                Row {
+
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+
+                }
+                Text(text = "13,200 Reviews")
+
+            }
+
+            //end
         }
 
-        Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
+        Spacer(modifier = Modifier.width(20.dp))
 
         Card() {
             Box(
                 modifier = Modifier
                     .height(150.dp)
-                    .width(200.dp),
+                    .width(250.dp),
                 contentAlignment = Alignment.Center,
             )
             {
@@ -144,7 +183,46 @@ fun DetailsScreen(navController: NavController) {
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop
                 )
+
             }
+            //start
+
+
+            Column(
+                modifier = Modifier
+                    .padding(start = 20.dp, end = 20.dp)
+            )
+            {
+                Text(text = "Crossroad Beach Resort", fontSize = 25.sp)
+                Text(text = "Offering world class hospitality")
+                Row {
+
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+
+                }
+                Text(text = "1900 Reviews")
+
+            }
+            //end
         }
         Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
 
@@ -152,7 +230,7 @@ fun DetailsScreen(navController: NavController) {
             Box(
                 modifier = Modifier
                     .height(150.dp)
-                    .width(200.dp),
+                    .width(250.dp),
                 contentAlignment = Alignment.Center,
             )
             {
@@ -163,6 +241,46 @@ fun DetailsScreen(navController: NavController) {
                     contentScale = ContentScale.Crop
                 )
             }
+           //start
+
+
+            Column(
+                modifier = Modifier
+                    .padding(start = 20.dp, end = 20.dp)
+            )
+            {
+                Text(text = "Crossroad Beach Resort", fontSize = 25.sp)
+                Text(text = "Offering world class hospitality")
+                Row {
+
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+
+                }
+                Text(text = "1900 Reviews")
+
+            }
+
+            //end
+
         }
         Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
 

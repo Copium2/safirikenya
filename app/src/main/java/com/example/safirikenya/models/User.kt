@@ -14,4 +14,6 @@ class User {
         this.id = id
     }
 
+    constructor()
+
 }
