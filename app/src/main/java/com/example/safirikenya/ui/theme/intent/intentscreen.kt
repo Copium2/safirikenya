@@ -78,13 +78,13 @@ fun intentscreen(navController: NavController) {
         var selected by remember { mutableIntStateOf(0) }
         Scaffold(
             bottomBar = {
-                NavigationBar {
+               NavigationBar {
                     bottomNavItems.forEachIndexed { index, bottomNavItem ->
                         NavigationBarItem(
                             selected = index == selected,
                             onClick = {
                                 selected = index
-                                navController.navigate(bottomNavItem.route)
+                                 navController.navigate(bottomNavItem.route)
                             },
                             icon = {
                                 BadgedBox(

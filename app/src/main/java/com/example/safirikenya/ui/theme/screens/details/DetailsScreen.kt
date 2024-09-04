@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
@@ -52,14 +53,7 @@ import com.example.safirikenya.ui.theme.NewGreen
 fun DetailsScreen(navController: NavController) {
 
 
-    Column(
-
-        modifier = Modifier
-            .fillMaxSize()
-            
-        )
-
-
+    Column(modifier = Modifier.fillMaxSize())
     {
         TopAppBar(
             title = { Text(text = "Hotels") },
@@ -83,7 +77,7 @@ fun DetailsScreen(navController: NavController) {
 
         )
 
-    Spacer(modifier = androidx.compose.ui.Modifier.height(20.dp))
+    Spacer(modifier = Modifier.height(20.dp))
 
     var search by remember { mutableStateOf("") }
     OutlinedTextField(
@@ -160,7 +154,7 @@ fun DetailsScreen(navController: NavController) {
                     )
 
                 }
-                Text(text = "13,200 Reviews")
+                Text(text = "1440 Reviews")
 
             }
 
@@ -219,12 +213,12 @@ fun DetailsScreen(navController: NavController) {
                     )
 
                 }
-                Text(text = "1900 Reviews")
+                Text(text = "3100 Reviews")
 
             }
             //end
         }
-        Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
+        Spacer(modifier = Modifier.width(20.dp))
 
         Card() {
             Box(
@@ -249,8 +243,8 @@ fun DetailsScreen(navController: NavController) {
                     .padding(start = 20.dp, end = 20.dp)
             )
             {
-                Text(text = "Crossroad Beach Resort", fontSize = 25.sp)
-                Text(text = "Offering world class hospitality")
+                Text(text = "Villa Hotel", fontSize = 25.sp)
+                Text(text = "The best hotel to relax after a safari")
                 Row {
 
                     Icon(
@@ -275,20 +269,20 @@ fun DetailsScreen(navController: NavController) {
                     )
 
                 }
-                Text(text = "1900 Reviews")
+                Text(text = "2100 Reviews")
 
             }
 
             //end
 
         }
-        Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
+        Spacer(modifier = Modifier.width(20.dp))
 
         Card() {
             Box(
                 modifier = Modifier
                     .height(150.dp)
-                    .width(200.dp),
+                    .width(250.dp),
                 contentAlignment = Alignment.Center,
             )
             {
@@ -299,6 +293,47 @@ fun DetailsScreen(navController: NavController) {
                     contentScale = ContentScale.Crop
                 )
             }
+
+            //start
+
+            Column(
+                modifier = Modifier
+                    .padding(start = 20.dp, end = 20.dp)
+            )
+            {
+                Text(text = "Pandora Beach Resort", fontSize = 25.sp)
+                Text(text = "The best resort to visit with the best sandy beaches.")
+                Row {
+
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+
+                }
+                Text(text = "11900 Reviews")
+
+            }
+            //end
+
+
+
         }
         Spacer(modifier = androidx.compose.ui.Modifier.width(20.dp))
 
@@ -332,15 +367,378 @@ fun DetailsScreen(navController: NavController) {
             )
             {
                 Image(
-                    painter = painterResource(id = R.drawable.img_13),
+                    painter = painterResource(id = R.drawable.img_21),
                     contentDescription = "home",
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop
                 )
             }
+            //start
+
+            Column(
+                modifier = Modifier
+                    .padding(start = 20.dp, end = 20.dp)
+            )
+            {
+                Text(text = "Panini luxury Hotel", fontSize = 25.sp)
+                Text(text = "The best hotel you could find")
+                Row {
+
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "Star",
+                        tint = Color.Yellow
+                    )
+
+                }
+                Text(text = "12090 Reviews")
+
+            }
+
+
+            //end
         }
 
         }
+       //start of 2nd  row
+
+
+        Row(
+            modifier = Modifier
+                .padding(start = 20.dp)
+                .horizontalScroll(rememberScrollState())
+        )
+
+        {
+
+            //Card
+            Card() {
+                Box(
+                    modifier = Modifier
+                        .height(150.dp)
+                        .width(350.dp),
+                    contentAlignment = Alignment.Center
+                )
+                {
+                    Image(
+                        painter = painterResource(id = R.drawable.img_22),
+                        contentDescription = "home",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+                //start
+
+                Column(
+                    modifier = Modifier
+                        .padding(start = 20.dp, end = 2.dp)
+                )
+                {
+                    Text(text = "Norflok hotel", fontSize = 20.sp)
+                    Text(text = "Best hotel in Nairobi the most convinient place to stay!")
+                    Row {
+
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+
+
+                    }
+                    Text(text = "10,200 Reviews")
+
+                }
+
+                //end
+            }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Card() {
+                Box(
+                    modifier = Modifier
+                        .height(150.dp)
+                        .width(250.dp),
+                    contentAlignment = Alignment.Center,
+                )
+                {
+                    Image(
+                        painter = painterResource(id = R.drawable.img_25),
+                        contentDescription = "home",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+
+                }
+                //start
+
+
+                Column(
+                    modifier = Modifier
+                        .padding(start = 20.dp, end = 20.dp)
+                )
+                {
+                    Text(text = "View hotel", fontSize = 25.sp)
+                    Text(text = "Offering world class hospitality")
+                    Row {
+
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+
+                    }
+                    Text(text = "1900 Reviews")
+
+                }
+                //end
+            }
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Card() {
+                Box(
+                    modifier = Modifier
+                        .height(150.dp)
+                        .width(250.dp),
+                    contentAlignment = Alignment.Center,
+                )
+                {
+                    Image(
+                        painter = painterResource(id = R.drawable.img_12),
+                        contentDescription = "home",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+                //start
+
+
+                Column(
+                    modifier = Modifier
+                        .padding(start = 20.dp, end = 20.dp)
+                )
+                {
+                    Text(text = "Villa Hotel", fontSize = 25.sp)
+                    Text(text = "The best hotel to relax after a safari")
+                    Row {
+
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+
+                    }
+                    Text(text = "1900 Reviews")
+
+                }
+
+                //end
+
+            }
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Card() {
+                Box(
+                    modifier = Modifier
+                        .height(150.dp)
+                        .width(250.dp),
+                    contentAlignment = Alignment.Center,
+                )
+                {
+                    Image(
+                        painter = painterResource(id = R.drawable.img_24),
+                        contentDescription = "home",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+
+                //start
+
+                Column(
+                    modifier = Modifier
+                        .padding(start = 20.dp, end = 20.dp)
+                )
+                {
+                    Text(text = "Tribunal ", fontSize = 25.sp)
+                    Text(text = "The best hotel expressing the beautiful culture of kenya.")
+                    Row {
+
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+
+                    }
+                    Text(text = "1900 Reviews")
+
+                }
+                //end
+
+
+
+            }
+            Spacer(modifier = Modifier.width(20.dp))
+
+
+            Card() {
+                Box(
+                    modifier = Modifier
+                        .height(150.dp)
+                        .width(250.dp),
+                    contentAlignment = Alignment.Center,
+                )
+                {
+                    Image(
+                        painter = painterResource(id = R.drawable.img_14),
+                        contentDescription = "home",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.width(20.dp))
+
+
+
+            Card() {
+                Box(
+                    modifier = Modifier
+                        .height(150.dp)
+                        .width(250.dp),
+                    contentAlignment = Alignment.Center,
+                )
+                {
+                    Image(
+                        painter = painterResource(id = R.drawable.img_23),
+                        contentDescription = "home",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+                //start
+
+                Column(
+                    modifier = Modifier
+                        .padding(start = 20.dp, end = 20.dp)
+                )
+                {
+                    Text(text = "Jamari luxury Hotel", fontSize = 25.sp)
+                    Text(text = "Jamari Nairobi hotel is a beautiful,clean and well appointed hotel")
+                    Row {
+
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Star",
+                            tint = Color.Yellow
+                        )
+
+                    }
+                    Text(text = "1900 Reviews")
+
+                }
+
+
+                //end
+            }
+
+        }
+        //end
+
 
         Spacer(modifier = androidx.compose.ui.Modifier.height(20.dp))
 
