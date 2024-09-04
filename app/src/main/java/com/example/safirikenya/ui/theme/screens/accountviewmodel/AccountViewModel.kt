@@ -1,5 +1,6 @@
 package com.example.safirikenya.ui.theme.screens.accountviewmodel
 
+
 import android.accounts.Account
 import android.app.ProgressDialog
 import android.content.Context
@@ -9,10 +10,10 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.navigation.NavController
 import com.example.safirikenya.data.AuthViewModel
-import com.example.safirikenya.models.Account
-import com.example.safirikenya.navigation.ADD_ACCOUNT
+import com.example.safirikenya.navigation.ROUT_ADDACCOUNT
 import com.example.safirikenya.navigation.ROUT_LOGIN
-import com.example.safirikenya.navigation.VIEW_ACCOUNT
+import com.example.safirikenya.navigation.ROUT_VIEWACCOUNT
+import com.example.safirikenya.ui.theme.screens.viewaccount.Account
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -48,7 +49,7 @@ class AccountViewModel(var navController: NavController, var context: Context) {
                         .child("Accounts/$accountId")
                     databaseRef.setValue(account).addOnCompleteListener {
                         if (it.isSuccessful){
-                            navController.navigate(VIEW_ACCOUNT)
+                            navController.navigate(ROUT_VIEWACCOUNT)
                             Toast.makeText(this.context, "Successfully created an account", Toast.LENGTH_SHORT).show()
                         }else{
                             Toast.makeText(this.context, "Error", Toast.LENGTH_SHORT).show()
@@ -85,7 +86,7 @@ class AccountViewModel(var navController: NavController, var context: Context) {
         var ref = FirebaseDatabase.getInstance().getReference()
             .child("Account/$accountId")
         ref.removeValue()
-        navController.navigate(ADD_ACCOUNT)
+        navController.navigate(ROUT_ADDACCOUNT)
     }
 
 
@@ -94,5 +95,12 @@ class AccountViewModel(var navController: NavController, var context: Context) {
             .child("Accounts/$accountId")
         ref.removeValue()
         Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
+    }
+
+    fun ViewAccount(
+        account: MutableState<Any>,
+        accounts: MutableList<Account>
+    ): SnapshotStateList<Account> {
+        TODO("Not yet implemented")
     }
 }

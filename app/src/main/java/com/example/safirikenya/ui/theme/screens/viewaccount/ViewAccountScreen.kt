@@ -1,6 +1,5 @@
 package com.example.safirikenya.ui.theme.screens.viewaccount
 
-
 import android.accounts.Account
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -13,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -40,13 +40,29 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
 import com.example.safirikenya.ui.theme.screens.accountviewmodel.AccountViewModel
 
+private val Account.imageUrl: String
+    get() {
+        TODO("Not yet implemented")
+    }
+private val Account.id: String
+    get() {
+        TODO("Not yet implemented")
+    }
+private val Account.email: String
+    get() {
+        TODO("Not yet implemented")
+    }
+private val Account.title: String
+    get() {
+        TODO("Not yet implemented")
+    }
+
 @Composable
-fun ViewaccountScreen(navController: NavController){
+fun ViewAccountScreen(navController: NavController){
 
 
     Column(modifier = Modifier
@@ -58,7 +74,7 @@ fun ViewaccountScreen(navController: NavController){
         var accountRepository = AccountViewModel(navController, context)
 
 
-        val emptyAccountState = remember { mutableStateOf(Account("","","","","")) }
+        val emptyAccountState = remember { mutableStateOf (Account("","","","","")) }
         var emptyAccountsListState = remember { mutableStateListOf<Account>() }
 
         var accounts = accountRepository.ViewAccount(emptyAccountState, emptyAccountsListState)
@@ -77,31 +93,33 @@ fun ViewaccountScreen(navController: NavController){
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        LazyColumn(){
-            items(accounts){
+        LazyColumn (){
+            items(accounts) {
                 AccountItem(
                     name = it.name,
-                    title = it. title,
+                    title = it.title,
                     email = it.email,
                     id = it.id,
-                    navController = navController,
+                    navController =NavController,
                     accountRepository = accountRepository,
-                    accountImage = it.imageUrl
+                    accountImage = it.imageUrl,
                 )
             }
+
         }
     }
 }
 
 fun Account(s: String, s1: String, s2: String, s3: String, s4: String): Any {
-
+    TODO("Not yet implemented")
 }
 
 
 @Composable
-fun AccountItem(name:String, title:String, email:String, id:String,
-                navController: NavHostController,
-                accountRepository: AccountViewModel, accountImage:String) {
+fun AccountItem(
+    name:String, title:String, email:String, id:String,
+    navController: NavController.Companion,
+    accountRepository: AccountViewModel, accountImage:String) {
 
     //1 item
 
@@ -192,7 +210,7 @@ fun AccountItem(name:String, title:String, email:String, id:String,
 }
 @Composable
 @Preview(showBackground = true)
-fun ViewaccountScreenPreview(){
-    ViewaccountScreen(rememberNavController())
+fun ViewAccountScreenPreview(){
+    ViewAccountScreen(rememberNavController())
 
 }
