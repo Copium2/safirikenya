@@ -47,10 +47,9 @@ import com.example.safirikenya.ui.theme.screens.accountviewmodel.AccountViewMode
 fun AddAccountScreen(navController: NavController){
 
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-        ,
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+
     ) {
 
         Spacer(modifier = Modifier.height(50.dp))
@@ -60,10 +59,6 @@ fun AddAccountScreen(navController: NavController){
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.SansSerif)
-
-
-
-
 
 
         var Name by remember { mutableStateOf("") }
@@ -82,17 +77,8 @@ fun AddAccountScreen(navController: NavController){
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
         )
 
-        Spacer(modifier = Modifier.height(10.dp))
 
 
-        OutlinedTextField(
-            value = title,
-            onValueChange = { title = it },
-            label = { Text(text = "Job title ") },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
-        )
-
-        //End of Textfield with dropdown
 
         Spacer(modifier = Modifier.height(10.dp))
 
@@ -104,10 +90,6 @@ fun AddAccountScreen(navController: NavController){
         )
 
         Spacer(modifier = Modifier.height(20.dp))
-
-
-        Spacer(modifier = Modifier.height(20.dp))
-
 
 
 
@@ -157,17 +139,7 @@ fun ImagePicker(modifier: Modifier = Modifier, context: android.content.Context,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 32.dp), horizontalAlignment = Alignment.CenterHorizontally,) {
-            Button(
-                onClick = {
-                    imagePicker.launch("image/*")
-                },
-                shape = RoundedCornerShape(5.dp),
-                colors = ButtonDefaults.buttonColors(Color.Gray)
-            ) {
-                Text(
-                    text = "Upload Photo"
-                )
-            }
+
 
             Spacer(modifier = Modifier.height(20.dp))
 

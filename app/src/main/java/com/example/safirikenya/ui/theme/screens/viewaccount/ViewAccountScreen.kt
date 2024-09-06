@@ -93,7 +93,7 @@ fun ViewAccountScreen(navController: NavController){
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        LazyColumn (){
+        LazyColumn {
             items(accounts) {
                 AccountItem(
                     name = it.name,

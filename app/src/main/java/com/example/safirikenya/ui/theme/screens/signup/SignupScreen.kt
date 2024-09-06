@@ -41,8 +41,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.safirikenya.R
-import com.example.safirikenya.navigation.ROUT_LOGIN
 import com.example.safirikenya.data.AuthViewModel
+import com.example.safirikenya.navigation.ROUT_VIEWACCOUNT
 import com.example.safirikenya.ui.theme.NewGreen
 import androidx.compose.ui.tooling.preview.Preview as Preview
 
@@ -156,7 +156,7 @@ fun SignupScreen(navController: NavController){
             Spacer(modifier = Modifier.height(10.dp))
 
             Button(
-                onClick = {navController.navigate(ROUT_LOGIN) },
+                onClick = {navController.navigate(ROUT_VIEWACCOUNT) },
                 modifier =Modifier
                     .fillMaxWidth()
                     .height(50.dp)

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
@@ -43,6 +44,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.safirikenya.R
 import com.example.safirikenya.navigation.ROUT_SignupScreen
 import com.example.safirikenya.data.AuthViewModel
+import com.example.safirikenya.navigation.ROUT_ADDACCOUNT
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -80,7 +82,7 @@ fun LoginScreen(navController: NavController) {
             fontSize = 18.sp,
             fontFamily = FontFamily.Cursive,
             color = Color.Magenta,
-            modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center
+            modifier = Modifier.fillMaxWidth().clickable { ROUT_ADDACCOUNT }, textAlign = TextAlign.Center,
         )
 
         Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
@@ -143,6 +145,8 @@ fun LoginScreen(navController: NavController) {
         )
     }
 }
+
+
 
 
 @Composable
